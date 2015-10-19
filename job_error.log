@@ -110,3 +110,27 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 189, in execute
     raise TweepError('Failed to send request: %s' % e)
 tweepy.error.TweepError: Failed to send request: HTTPSConnectionPool(host='api.twitter.com', port=443): Read timed out.
+Traceback (most recent call last):
+  File "tweets_collector.py", line 63, in <module>
+    searched_tweets = api.search(q=keyword['name'], since_id=keyword['last_retrieved_id'])    
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 243, in _call
+    return method.execute()
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 225, in execute
+    raise RateLimitError(error_msg, resp)
+tweepy.error.RateLimitError: [{u'message': u'Rate limit exceeded', u'code': 88}]
+Traceback (most recent call last):
+  File "tweets_collector.py", line 63, in <module>
+    searched_tweets = api.search(q=keyword['name'], since_id=keyword['last_retrieved_id'])    
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 243, in _call
+    return method.execute()
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 225, in execute
+    raise RateLimitError(error_msg, resp)
+tweepy.error.RateLimitError: [{u'message': u'Rate limit exceeded', u'code': 88}]
+Traceback (most recent call last):
+  File "tweets_collector.py", line 63, in <module>
+    searched_tweets = api.search(q=keyword['name'], since_id=keyword['last_retrieved_id'])    
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 243, in _call
+    return method.execute()
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 225, in execute
+    raise RateLimitError(error_msg, resp)
+tweepy.error.RateLimitError: [{u'message': u'Rate limit exceeded', u'code': 88}]
