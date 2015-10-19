@@ -7,8 +7,8 @@ from pymongo.errors import DuplicateKeyError
 def initCities():    
     tweets_db.cities.remove({})
     tweets_db.cities.insert({"city_id": 1, "name": "Bogotá"})
-    tweets_db.cities.insert({"city_id": 2, "name": "Medellín"})
-    tweets_db.cities.insert({"city_id": 3, "name": "Cali"})
+    tweets_db.cities.insert({"city_id": 2, "name": "Cali"})
+    tweets_db.cities.insert({"city_id": 3, "name": "Medellín"})
     tweets_db.cities.insert({"city_id": 4, "name": "Barranquilla"})
     
 def initCandidates():    
