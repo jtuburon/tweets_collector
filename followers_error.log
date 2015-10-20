@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "followers_retriever.py", line 35, in <module>
+    user= api.get_user(c['account'])
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 243, in _call
+    return method.execute()
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 189, in execute
+    raise TweepError('Failed to send request: %s' % e)
+TypeError: __str__ returned non-string (type SysCallError)
+Traceback (most recent call last):
+  File "followers_retriever.py", line 35, in <module>
+    user= api.get_user(c['account'])
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 243, in _call
+    return method.execute()
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 189, in execute
+    raise TweepError('Failed to send request: %s' % e)
+TypeError: __str__ returned non-string (type SysCallError)
+Traceback (most recent call last):
+  File "followers_retriever.py", line 35, in <module>
+    user= api.get_user(c['account'])
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 243, in _call
+    return method.execute()
+  File "/usr/local/lib/python2.7/dist-packages/tweepy/binder.py", line 189, in execute
+    raise TweepError('Failed to send request: %s' % e)
+TypeError: __str__ returned non-string (type SysCallError)

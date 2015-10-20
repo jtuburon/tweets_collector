@@ -34,12 +34,18 @@ for tweet in tweets:
 		spanew_word =spanew_db.words.find_one({"word": word})
 		if spanew_word:
 			spanew_words.append(spanew_word)
-	if len(spanew_words)>=2:
+	ratio= len(spanew_words)
+	if ratio>=2:
 		tweet_text = tweet['text']
 		tweet_r= {
 			"tweet_id": tweet['_id'],
+			"ratio": ratio,
 			"v_m": calculate_overall_mean(spanew_words, "valence"),
 			"a_m": calculate_overall_mean(spanew_words, "arousal")
 		}
+		if "city_id" in tweet.keys():
+			tweet_r['city_id']=tweet['city_id']
+		if "candidate_id" in tweet.keys():
+			tweet_r['candidate_id']=tweet['candidate_id']
 		tweets_db.computed_tweets.insert(tweet_r)
 

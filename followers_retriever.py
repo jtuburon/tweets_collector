@@ -41,5 +41,4 @@ for c in candidates:
 		"followers_count": followers_count 
 	}
 	tweets_db.followers_history.insert(f_h);
-
 print datetime.datetime.now()

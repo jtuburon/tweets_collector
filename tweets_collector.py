@@ -51,28 +51,31 @@ ACCESS_TOKEN_SECRET='h57v6qpaBrxZf8Z4nzsOTzivH9wp76WcB2gBo22aGNDvi'
 auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 
-api = tweepy.API(auth)
+api = tweepy.API(auth_handler= auth, wait_on_rate_limit=True)
 
 client = MongoClient('localhost', 27017)
 
 tweets_db = client['tweets']
 spanew_db = client['spanew']
 
-for c in tweets_db.categories.find():
-    for keyword in c['keywords']:
-        searched_tweets = api.search(q=keyword['name'], since_id=keyword['last_retrieved_id'])    
-        print len(searched_tweets)
-        for tweet in searched_tweets:
-            json_data = json.loads(json.dumps(tweet._json))
-            json_data['city_id']=c['city_id']
-            json_data['candidate_id']=c['candidate_id']
-            try:
-                tweets_db.tweets.insert(json_data)
-                
-                tweet_obj= tweets_db.tweets.find_one({'text': json_data['text']});
-                compute_tweet(tweet_obj)
-            except Exception as e:
-               pass
-        if len(searched_tweets)>0:
-            keyword['last_retrieved_id']=searched_tweets[0].id
-            tweets_db.categories.update({'_id': c['_id']}, {"$set": c}, upsert=False)
+while True:
+    print "ITERATION"
+    for c in tweets_db.categories.find():
+        for keyword in c['keywords']:
+            searched_tweets = api.search(q=keyword['name'], since_id=keyword['last_retrieved_id'])    
+            print keyword['name']
+            print len(searched_tweets)
+            print ""
+            for tweet in searched_tweets:
+                json_data = json.loads(json.dumps(tweet._json))
+                json_data['city_id']=c['city_id']
+                json_data['candidate_id']=c['candidate_id']
+                try:
+                    tweets_db.tweets.insert(json_data)
+                    tweet_obj= tweets_db.tweets.find_one({'id': json_data['id']});
+                    compute_tweet(tweet_obj)
+                except Exception as e:
+                   pass
+            if len(searched_tweets)>0:
+                keyword['last_retrieved_id']=searched_tweets[0].id
+                tweets_db.categories.update({'_id': c['_id']}, {"$set": c}, upsert=False)
