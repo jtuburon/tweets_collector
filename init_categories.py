@@ -7,41 +7,41 @@ categories=[
 		"city_id":1,
 		"candidate_id":10,
 		"keywords":[
-		    {"name": "Clara Lopez", "last_retrieved_id": 0},
-		    {"name": "@ClaraLopezObre" , "last_retrieved_id": 0},
-		    {"name": "#ClaraAlcaldesa", "last_retrieved_id": 0},
-		    {"name": "#estudiantesvotanclara", "last_retrieved_id": 0}
+		    #{"name": "Clara Lopez", "last_retrieved_id": 0},
+		    {"name": "@ClaraLopezObre" , "last_retrieved_id": 0}
+		    #{"name": "#ClaraAlcaldesa", "last_retrieved_id": 0},
+		    #{"name": "#estudiantesvotanclara", "last_retrieved_id": 0}
 		]
 	},
 	{	
 		"city_id":1,
 		"candidate_id":11,
 		"keywords":[
-			{"name": "Rafael Pardo","last_retrieved_id": 0},
-			{"name": "@RafaelPardo", "last_retrieved_id": 0},
-			{"name": "#seguroquesí", "last_retrieved_id": 0},
-			{"name": "#BogotaOrganizada", "last_retrieved_id": 0},
-			{"name": "#yovotopardo", "last_retrieved_id": 0}
+			#{"name": "Rafael Pardo","last_retrieved_id": 0},
+			{"name": "@RafaelPardo", "last_retrieved_id": 0}
+			#{"name": "#seguroquesí", "last_retrieved_id": 0},
+			#{"name": "#BogotaOrganizada", "last_retrieved_id": 0},
+			#{"name": "#yovotopardo", "last_retrieved_id": 0}
 		]
 	},
 	{	
 		"city_id":1,
 		"candidate_id":12,
 		"keywords":[
-			{"name": "Francisco Santos", "last_retrieved_id": 0},
-			{"name": "@PachoSantosC", "last_retrieved_id": 0},
-			{"name": "#cambioconseguridad", "last_retrieved_id": 0},
-			{"name": "#yovotoporpacho", "last_retrieved_id": 0}
+			#{"name": "Francisco Santos", "last_retrieved_id": 0},
+			{"name": "@PachoSantosC", "last_retrieved_id": 0}
+			#{"name": "#cambioconseguridad", "last_retrieved_id": 0},
+			#{"name": "#yovotoporpacho", "last_retrieved_id": 0}
 		]
 	},
 	{
 		"city_id":1,	
 		"candidate_id":13,
 		"keywords":[
-			{"name": "Enrique Peñaloza", "last_retrieved_id": 0},
-			{"name": "@EnriquePenalosa", "last_retrieved_id": 0},
-			{"name": "#yovotopenalosa", "last_retrieved_id": 0},
-			{"name": "#recuperemosbogota", "last_retrieved_id": 0}
+			#{"name": "Enrique Peñaloza", "last_retrieved_id": 0},
+			{"name": "@EnriquePenalosa", "last_retrieved_id": 0}
+			#{"name": "#yovotopenalosa", "last_retrieved_id": 0},
+			#{"name": "#recuperemosbogota", "last_retrieved_id": 0}
 		]
 	},
 	

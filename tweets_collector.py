@@ -62,7 +62,7 @@ while True:
     print "ITERATION"
     for c in tweets_db.categories.find():
         for keyword in c['keywords']:
-            searched_tweets = api.search(q=keyword['name'], since_id=keyword['last_retrieved_id'])    
+            searched_tweets = api.search(q=keyword['name'], since_id=keyword['last_retrieved_id'], count=100)    
             print keyword['name']
             print len(searched_tweets)
             print ""
